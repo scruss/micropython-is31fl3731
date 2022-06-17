@@ -199,3 +199,18 @@ class CharlieWing(Matrix):
         else:
             y = 7 - y
         return x * 16 + y
+
+
+class PicoEd(Matrix):
+    # lifted from https://github.com/elecfreaks/pico_ed
+    # but since it was lifted from the parent repo without credit, no-one's going to mind
+    width = 17
+    height = 7
+
+    def _pixel_addr(self, x, y):
+        if x > 8:
+            x = 17 - x
+            y += 8
+        else:
+            y = 7 - y
+        return x * 16 + y
