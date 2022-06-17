@@ -1,10 +1,13 @@
-DEPRECATED LIBRARY  Driver for IS31FL3731-based LED matrices
-============================================================
+Driver for IS31FL3731-based LED matrices
+========================================
 
-This library has been deprecated! We are leaving this up for historical and research purposes but archiving the repository.
+Original documentation at http://micropython-is31fl3731.readthedocs.io/
 
-We are only supporting CircuitPython libraries.
+Trivially modified to add support for the 7x17 matrix built into the [url=https://www.elecfreaks.com/picoed.html]ELECFREAKS Pico:ed[/url]:
 
-Check out this library for using IS31FL3731 with Python on microcontrollers: https://github.com/adafruit/Adafruit_CircuitPython_IS31FL3731
-
-Documentation at http://micropython-is31fl3731.readthedocs.io/
+    from machine import I2C
+    import is31fl3731
+    
+    i2c = I2C(1)  # scl=19, sda=18
+    display = is31fl3731.PicoEd(i2c)
+    display.fill(127)
