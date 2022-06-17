@@ -24,3 +24,14 @@ Example usage with the Feather HUZZAH ESP8266 board::
     display = is31fl3731.CharlieWing(i2c)
     display.fill(127)
 
+
+Pico:ed
+=======
+
+Example usage with the ELECFREAKS Pico:ed::
+
+    from machine import I2C
+    import is31fl3731
+    i2c = I2C(1)  # scl=19, sda=18
+    display = is31fl3731.PicoEd(i2c)
+    display.fill(127)
