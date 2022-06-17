@@ -86,3 +86,9 @@ Matrices
     Driver for the 15x7 CharlieWing Adafruit FeatherWing.
 
     Has the same methods as the :class:Matrix above.
+
+.. class:: PicoEd(i2c, address=0x74)
+
+    Driver for the 17x7 ELECFREAKS Pico:ed.
+
+    Has the same methods as the :class:Matrix above.
